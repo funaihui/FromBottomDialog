@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.wizardev.popdialogfrombottom.MainActivity">
+    android:orientation="vertical"
+    android:layout_height="match_parent">
 
     <Button
         android:layout_width="match_parent"
-        android:text="PopupWindow方式"
+        android:text="@string/pop"
         android:id="@+id/popup_window"
         android:layout_height="wrap_content" />
-
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/dialog"
+        android:id="@+id/dialog"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/dialogfragment"
+        android:id="@+id/dialog_fragment"
+        android:layout_height="wrap_content" />
 </LinearLayout>
