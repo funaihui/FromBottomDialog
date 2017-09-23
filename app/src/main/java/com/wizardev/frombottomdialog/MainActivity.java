@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mPopupAction;
     private Button mDialog;
     private Button mFragment;
+    private Button mBottomSheet;
     private DialogFromBottom dialogFromBottom;
     private View dialogContent;
 
@@ -43,6 +45,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mFragment.setOnClickListener(this);
         dialogFromBottom = new DialogFromBottom(this);
         dialogFromBottom.setContentView(dialogContent);
+
+        mBottomSheet = findViewById(R.id.bottom_sheet);
+        mBottomSheet.setOnClickListener(this);
 
     }
 
@@ -107,6 +112,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.dismiss:
                 dismissPopWindow();
                 break;
+            case R.id.bottom_sheet:
+                showBottomSheetDialog();
+                break;
         }
     }
 
@@ -134,5 +142,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
     private void DialogFromBottom() {
        dialogFromBottom.show();
+    }
+    //使用BottomSheetDialog方式实现底部弹窗
+    void showBottomSheetDialog(){
+        BottomSheetDialog bottomSheet = new BottomSheetDialog(this);
+        bottomSheet.setCancelable(true);
+        bottomSheet.setContentView(R.layout.dialog_layout);
+        bottomSheet.show();
     }
 }

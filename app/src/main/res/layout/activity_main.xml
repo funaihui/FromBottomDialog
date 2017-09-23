@@ -19,4 +19,9 @@
         android:text="@string/dialogfragment"
         android:id="@+id/dialog_fragment"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/bottom_sheet"
+        android:id="@+id/bottom_sheet"
+        android:layout_height="wrap_content" />
 </LinearLayout>

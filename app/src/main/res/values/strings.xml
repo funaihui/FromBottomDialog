@@ -3,4 +3,5 @@
     <string name="pop">PopupWindow方式</string>
     <string name="dialog">Dialog方式</string>
     <string name="dialogfragment">DialogFragment方式</string>
+    <string name="bottom_sheet">BottomSheet方式</string>
 </resources>
